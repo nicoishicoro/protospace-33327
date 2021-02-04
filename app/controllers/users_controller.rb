@@ -7,5 +7,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :profile, :occupation, :position).merge(user_id: current_user.id, prototype_id: params[:prototype_id])
   end
-
 end
