@@ -14,7 +14,7 @@ class PrototypesController < ApplicationController
     if Prototype.create
       redirect_to prototypes_path(@prototypes)
     else
-      render :new
+      render :create
     end
   end
 
