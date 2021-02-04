@@ -10,11 +10,11 @@ class PrototypesController < ApplicationController
   end
 
   def create
-    Prototype.create(prototype_params)
-    if Prototype.create
+    @prototype = Prototype.create(prototype_params)
+    if @prototype.create
       redirect_to prototypes_path(@prototypes)
     else
-      render :create
+      render :new
     end
   end
 
